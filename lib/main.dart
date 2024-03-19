@@ -93,8 +93,8 @@ class PostWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return SliverToBoxAdapter(
       child: Container(
-        margin: EdgeInsets.symmetric(vertical: 10.0),
-        padding: EdgeInsets.all(10.0),
+        margin: const EdgeInsets.symmetric(vertical: 10.0),
+        padding: const EdgeInsets.all(10.0),
         decoration: BoxDecoration(
           color: Colors.white,
           boxShadow: [
@@ -102,7 +102,7 @@ class PostWidget extends StatelessWidget {
               color: Colors.grey.withOpacity(0.5),
               spreadRadius: 3,
               blurRadius: 5,
-              offset: Offset(0, 3), // changes position of shadow
+              offset: const Offset(0, 3),
             ),
           ],
         ),
@@ -115,13 +115,13 @@ class PostWidget extends StatelessWidget {
                   radius: 20.0,
                   backgroundImage: AssetImage(avatarImage),
                 ),
-                SizedBox(width: 10.0),
+                const SizedBox(width: 10.0),
                 Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(userName,
-                        style: TextStyle(fontWeight: FontWeight.bold)),
-                    Text(postTime, style: TextStyle(color: Colors.grey)),
+                        style: const TextStyle(fontWeight: FontWeight.bold)),
+                    Text(postTime, style: const TextStyle(color: Colors.grey)),
                   ],
                 ),
               ],
@@ -129,11 +129,11 @@ class PostWidget extends StatelessWidget {
             const SizedBox(height: 10.0),
             Text(
               postText,
-              style: TextStyle(fontSize: 16.0),
+              style: const TextStyle(fontSize: 16.0),
             ),
-            SizedBox(height: 10.0),
+            const SizedBox(height: 10.0),
             Image.asset(imagePath),
-            SizedBox(height: 10.0),
+            const SizedBox(height: 10.0),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
@@ -142,7 +142,7 @@ class PostWidget extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.spaceAround,
                     children: [
                       IconButton(
-                        icon: Icon(Icons.thumb_up),
+                        icon: const Icon(Icons.thumb_up),
                         onPressed: () {},
                       ),
                       const Text('Like'),
@@ -154,7 +154,7 @@ class PostWidget extends StatelessWidget {
                       const Text('Comment'),
                       const SizedBox(width: 8),
                       IconButton(
-                        icon: Icon(Icons.share),
+                        icon: const Icon(Icons.share),
                         onPressed: () {},
                       ),
                       const Text('Share'),
